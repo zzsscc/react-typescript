@@ -1,0 +1,12 @@
+{
+  "name": "react-typescript",
+  "version": "1.0.0",
+  "description": "react-typescript",
+  "main": "index.js",
+  "repository": "https://github.com/zzsscc/react-typescript.git",
+  "author": "zsc",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.0"
+  }
+}
