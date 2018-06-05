@@ -6,7 +6,29 @@
   "repository": "https://github.com/zzsscc/react-typescript.git",
   "author": "zsc",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open --env.NODE_ENV=development --mode development --port 3000",
+    "dev": "webpack --env.NODE_ENV=development --mode development",
+    "prod": "webpack --env.NODE_ENV=production --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "react": "^16.4.0"
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "csv-loader": "^2.1.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "react": "^16.4.0",
+    "sass-loader": "^7.0.2",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.11.0",
+    "webpack-merge": "^4.1.2",
+    "xml-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4"
   }
 }
