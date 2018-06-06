@@ -8,7 +8,7 @@ module.exports = {
   entry: 
     // `${srcRoot('index.js')}`,
     { // 多文件
-      test: `${srcRoot('client/test/index.js')}`,
+      test: `${srcRoot('client/test/index.ts')}`,
     },
   output: {
     filename: '[name].bundle.js',           // 输出文件
@@ -16,6 +16,12 @@ module.exports = {
     // 给url-loader用的资源文件前缀路径,表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
     // 具体表现为：被设置为url-loader的outputPath前的路径  -->  ..path/dist/img
     publicPath: 'dist/'
+  },
+  resolve: {
+    extensions: ['.json', '.web.js', '.js', '.ts', 'tsx', '.jsx', 'less', 'scss', 'css'],
+    alias: {
+      components: `${srcRoot('common/components')}`,
+    }
   },
   module: {
     rules: [
