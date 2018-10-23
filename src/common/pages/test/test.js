@@ -14,7 +14,7 @@ import * as React from 'react'
   render() {
     return (
       <div>
-        1234
+        test
       </div>
     )
   }
