@@ -7,7 +7,7 @@
   "author": "zsc",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open --env.NODE_ENV=development --mode development --port 3000",
+    "start": "npm run dev && npm run serve",
     "dev": "webpack --env.NODE_ENV=development --mode development --watch --progress && echo ok",
     "prod": "webpack --env.NODE_ENV=production --mode production --progress && echo ok",
     "serve": "serve -p 3000",

@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { srcRoot, rootNode } = require('./configs/helpers/path');
-
 const outputPath = path.resolve(__dirname, './dist');
 const clientPath = './src/client'
 function resolve(dir) {

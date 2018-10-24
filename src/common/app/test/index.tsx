@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { AppContainer as AppContainer } from 'react-hot-loader'
 import { Provider } from 'mobx-react'
-import routes from 'routes/test/index.tsx'
+import routes from 'routes/index.tsx'
 
 interface Props {
   stores?: object,
