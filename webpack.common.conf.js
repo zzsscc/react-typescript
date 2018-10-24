@@ -25,7 +25,7 @@ module.exports = {
     publicPath: 'dist/'
   },
   resolve: {
-    extensions: ['.json', '.web.js', '.js', '.ts', 'tsx', '.jsx', 'less', 'scss', 'css'],
+    extensions: ['.json', '.web.js', '.ts', 'tsx', '.js', '.jsx', 'less', 'scss', 'css'],
     alias: {
       common: resolve('common'),
       app: resolve('common/app'),
@@ -33,15 +33,16 @@ module.exports = {
       components: resolve('common/components'),
       routes: resolve('common/routes'),
       pages: resolve('common/pages'),
+      stores: resolve('common/stores'),
     }
   },
   module: {
     rules: [
       { test: /\.(tsx|ts)?$/,
         use: [
-          'ts-loader',
-          'babel-loader',
-          'awesome-typescript-loader'
+          // 'ts-loader',
+          // 'babel-loader',
+          'awesome-typescript-loader',
         ],
         exclude: /node_modules/
       },
@@ -109,6 +110,6 @@ module.exports = {
       template: path.resolve(__dirname, './index.html'),
       inject: true,
       chunks: ['vendor', 'main'],
-    })
+    }),
   ],
 };

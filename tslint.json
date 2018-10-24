@@ -4,7 +4,7 @@
     "tslint-react"
   ],
   "rules": {
-    "ter-max-len": ["error", 160, 4, {
+    "ter-max-len": ["error", 160, 2, {
       "comments": 160
     }],
     "ter-indent": [true, 2],

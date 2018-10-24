@@ -1,13 +1,14 @@
 import 'core-js'
-// import * as React from 'react'
+import 'reflect-metadata'
 import { render as render } from 'react-dom'
 import * as ReactDOM from 'react-dom'
 import app from 'app/test/index.tsx'
+import TestStore from 'stores/test'
 
-render(app({}), document.getElementById('app'))
+render(app({ stores: TestStore }), document.getElementById('app') as HTMLElement)
 
 if (module.hot) {
-  module.hot.accept('app/test/index.tsx', (): any => {
-    ReactDOM.render(app({}), document.getElementById('app'))
+  module.hot.accept('app/test/index.tsx', () => {
+    ReactDOM.render(app({ stores: TestStore }), document.getElementById('app') as HTMLElement)
   })
 }

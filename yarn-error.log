@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/zhanshichao/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js
+  /Users/zhanshichao/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add transform-decorators-legacy --dev
 
 PATH: 
   /Users/zhanshichao/.nvm/versions/node/v8.10.0/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/zhanshichao/Documents/apache-maven-3.5.2/bin:.:/Users/zhanshichao/Library/Android/sdk/tools:/Users/zhanshichao/Library/Android/sdk/platform-tools:/Users/zhanshichao/Documents/android-ndk-r10e:/Users/zhanshichao/Documents/apache-maven-3.5.2/bin:/Users/zhanshichao/Library/Android/sdk/tools:/Users/zhanshichao/Library/Android/sdk/platform-tools:/Users/zhanshichao/Documents/android-ndk-r10e:.
@@ -60,8 +60,8 @@ npm manifest:
       "react": "^16.4.0",
       "react-dom": "^16.4.0",
       "react-hot-loader": "^4.3.0",
-      // "react-router": "^4.2.0",
       "react-router-dom": "^4.2.2",
+      "reflect-metadata": "^0.1.12",
       "sass-loader": "^7.0.2",
       "source-map-loader": "^0.2.3",
       "style-loader": "^0.21.0",
@@ -75,9 +75,10 @@ npm manifest:
       "xml-loader": "^1.2.1"
     },
     "devDependencies": {
+      "serve": "^1.4.0",
+      "tslint-eslint-rules": "^5.4.0",
       "webpack-cli": "^3.0.2",
-      "webpack-dev-server": "^3.1.4",
-      "serve": "^1.4.0"
+      "webpack-dev-server": "^3.1.4"
     }
   }
 
@@ -2337,6 +2338,13 @@ Lockfile:
     dependencies:
       buffer-indexof "^1.0.0"
   
+  doctrine@0.7.2:
+    version "0.7.2"
+    resolved "http://registry.npm.taobao.org/doctrine/download/doctrine-0.7.2.tgz#7cb860359ba3be90e040b26b729ce4bfa654c523"
+    dependencies:
+      esutils "^1.1.6"
+      isarray "0.0.1"
+  
   dom-converter@~0.1:
     version "0.1.4"
     resolved "http://registry.npm.taobao.org/dom-converter/download/dom-converter-0.1.4.tgz#a45ef5727b890c9bffe6d7c876e7b19cb0e17f3b"
@@ -2537,6 +2545,10 @@ Lockfile:
   estraverse@^4.1.0, estraverse@^4.1.1:
     version "4.2.0"
     resolved "http://registry.npm.taobao.org/estraverse/download/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
+  
+  esutils@^1.1.6:
+    version "1.1.6"
+    resolved "http://registry.npm.taobao.org/esutils/download/esutils-1.1.6.tgz#c01ccaa9ae4b897c6d0c3e210ae52f3c7a844375"
   
   esutils@^2.0.2:
     version "2.0.2"
@@ -5316,6 +5328,10 @@ Lockfile:
     dependencies:
       balanced-match "^0.4.2"
   
+  reflect-metadata@^0.1.12:
+    version "0.1.12"
+    resolved "http://registry.npm.taobao.org/reflect-metadata/download/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
+  
   regenerate@^1.2.1:
     version "1.4.0"
     resolved "http://registry.npm.taobao.org/regenerate/download/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
@@ -6259,9 +6275,21 @@ Lockfile:
       micromatch "^3.1.4"
       semver "^5.0.1"
   
+  tslib@1.9.0:
+    version "1.9.0"
+    resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.9.0.tgz#e37a86fda8cbbaf23a057f473c9f4dc64e5fc2e8"
+  
   tslib@^1.8.0, tslib@^1.8.1:
     version "1.9.2"
     resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.9.2.tgz#8be0cc9a1f6dc7727c38deb16c2ebd1a2892988e"
+  
+  tslint-eslint-rules@^5.4.0:
+    version "5.4.0"
+    resolved "http://registry.npm.taobao.org/tslint-eslint-rules/download/tslint-eslint-rules-5.4.0.tgz#e488cc9181bf193fe5cd7bfca213a7695f1737b5"
+    dependencies:
+      doctrine "0.7.2"
+      tslib "1.9.0"
+      tsutils "^3.0.0"
   
   tslint-react@^3.6.0:
     version "3.6.0"
@@ -6289,6 +6317,12 @@ Lockfile:
   tsutils@^2.12.1, tsutils@^2.13.1:
     version "2.27.1"
     resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-2.27.1.tgz#ab0276ac23664f36ce8fd4414daec4aebf4373ee"
+    dependencies:
+      tslib "^1.8.1"
+  
+  tsutils@^3.0.0:
+    version "3.2.0"
+    resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-3.2.0.tgz#bb2a7e2f34331f1dbd9fbe04ac0886524ae11e36"
     dependencies:
       tslib "^1.8.1"
   
@@ -6870,10 +6904,14 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  SyntaxError: /Users/zhanshichao/Documents/project/ts/package.json: Unexpected token / in JSON at position 1697
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:1036:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
-      at <anonymous>
+  Error: http://60.191.68.46:7001/transform-decorators-legacy: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:65019:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:132430:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:133413:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:133333:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
