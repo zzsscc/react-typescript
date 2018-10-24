@@ -15,12 +15,19 @@ export default class Test extends React.Component<Props, object> {
     }
   }
   componentWillMount() {
-    alert(this.props.stores.userInfo)
+    console.info(this.props.stores)
+  }
+
+  handleAdd = async () => {
+    this.props.stores.HomeStore.addCount()
   }
   render() {
+    const { count } = this.props.stores.HomeStore
     return (
       <div>
         test
+        <p>{count}</p>
+        <button onClick={this.handleAdd}>add</button>
       </div>
     )
   }

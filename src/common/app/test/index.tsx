@@ -5,11 +5,11 @@ import { Provider } from 'mobx-react'
 import routes from 'routes/index.tsx'
 
 interface Props {
-  stores?: object,
+  stores?: Object,
   [name: string]: any
 }
 export default function app(props?: Props): any {
-  const stores: object = props.stores
+  const stores: Object = props.stores
   return (
     <AppContainer>
       <Provider stores={stores}>
