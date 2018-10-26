@@ -34,6 +34,7 @@ module.exports = {
       pages: resolve('common/pages'),
       stores: resolve('common/stores'),
       styles: resolve('common/styles'),
+      static: resolve('common/static'),
     }
   },
   module: {

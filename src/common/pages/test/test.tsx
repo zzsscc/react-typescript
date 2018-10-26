@@ -2,6 +2,8 @@ import * as React from 'react'
 import { observer, inject } from 'mobx-react'
 import { Link as Link } from 'react-router-dom'
 
+import './index.scss'
+
 interface Props {
   [name: string]: any
 }
@@ -35,6 +37,12 @@ export default class Test extends React.Component<Props, object> {
     // 目标页面使用this.props.location.state.key获取origin
     this.props.history.push('/home', { origin: this.props.match.url })
   }
+  handleInputChange = (e) => {
+    console.info('handleInputChange', e)
+    const { name, value } = e.currentTarget
+    console.info('handleInputChange currentTarget', name, value)
+    this.props.stores.HomeStore.setCount(value)
+  }
   render() {
     const { count } = this.props.stores.HomeStore
     return (
@@ -44,6 +52,9 @@ export default class Test extends React.Component<Props, object> {
         <button onClick={this.handleAdd}>add</button>
         <Link to="/home">Home</Link>
         <button onClick={this.handleJump}>jump</button>
+        <input type="text" onChange={this.handleInputChange} />
+        <div className="bg-img" />
+        <div className="bg-img-big" />
       </div>
     )
   }

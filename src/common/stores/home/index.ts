@@ -24,6 +24,13 @@ export class Store {
       this.home.count += 1
     }
   }
+
+  @action
+  public setCount(count?: number): void {
+    if (count) {
+      this.home.count = count
+    }
+  }
 }
 
 export default new Store()
