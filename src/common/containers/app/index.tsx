@@ -19,13 +19,12 @@ export interface Props {
     }
   }
   render() {
-    console.info(this)
     return (
       <div>
         app
         <div>
           <Route exact path="/" component={Test} />
-          <Route path="/test" component={Test} />
+          <Route path="/test/:coo" component={Test} />
           <Route path="/home" component={Home} />
         </div>
       </div>

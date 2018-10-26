@@ -16,14 +16,23 @@ export default class Test extends React.Component<Props, object> {
     }
   }
   componentWillMount() {
-    // console.info(this.props)
+    console.info('test props', this.props)
+    const { coo } = this.props.match.params
+    if (coo) {
+      console.info('test params coo', coo)
+    }
+    const { origin } = this.props.location.state
+    if (origin) {
+      console.info('test state origin', origin)
+    }
   }
 
   handleAdd = async () => {
     this.props.stores.HomeStore.addCount()
   }
   handleJump = async () => {
-    this.props.history.push('/home', null)
+    // 目标页面使用this.props.location.state.key获取origin
+    this.props.history.push('/home', { origin: this.props.match.url })
   }
   render() {
     const { count } = this.props.stores.HomeStore

@@ -15,7 +15,11 @@ export default class Home extends React.Component<Props, object> {
     }
   }
   componentWillMount() {
-    console.info(this.props.stores)
+    console.info('home props', this.props)
+    const { origin } = this.props.location.state
+    if (origin) {
+      console.info('test state origin', origin)
+    }
   }
   handleBack = async () => {
     await this.props.history.push('/')
@@ -24,7 +28,9 @@ export default class Home extends React.Component<Props, object> {
     await this.props.stores.HomeStore.addCount()
   }
   handleJump = async () => {
-    await this.props.history.push('/test', null)
+    const { count } = this.props.stores.HomeStore
+    // 目标页面使用this.props.match.params.key获取count、this.props.location.state.key获取origin
+    await this.props.history.push(`/test/:${count}`, { origin: this.props.match.url })
   }
   render() {
     const { count } = this.props.stores.HomeStore
