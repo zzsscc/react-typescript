@@ -21,8 +21,9 @@ export default class Test extends React.Component<Props, object> {
     if (coo) {
       console.info('test params coo', coo)
     }
-    const { origin } = this.props.location.state
-    if (origin) {
+    const { state } = this.props.location
+    if (state) {
+      const { origin } = state
       console.info('test state origin', origin)
     }
   }

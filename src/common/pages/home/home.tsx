@@ -16,8 +16,9 @@ export default class Home extends React.Component<Props, object> {
   }
   componentWillMount() {
     console.info('home props', this.props)
-    const { origin } = this.props.location.state
-    if (origin) {
+    const { state } = this.props.location
+    if (state) {
+      const { origin } = state
       console.info('test state origin', origin)
     }
   }
