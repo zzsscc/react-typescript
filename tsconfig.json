@@ -34,6 +34,7 @@
         "pages/*": ["pages/*"],
         "routes/*": ["routes/*"],
         "stores/*": ["stores/*"],
+        "styles/*": ["styles/*"],
       }
     },
     "files": [

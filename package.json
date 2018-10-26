@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev && npm run serve",
-    "dev": "webpack --env.NODE_ENV=development --mode development --watch --progress && echo ok",
+    "dev": "webpack --env.NODE_ENV=development --mode development --colors --watch --progress && echo ok",
     "prod": "webpack --env.NODE_ENV=production --mode production --progress && echo ok",
     "serve": "serve -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1"

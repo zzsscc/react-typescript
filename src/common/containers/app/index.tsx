@@ -2,6 +2,9 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import { Route as Route } from 'react-router-dom'
 import { Test } from 'pages/test'
+import { Home } from 'pages/home'
+
+import 'styles/common.scss'
 
 export interface Props {
   props?: any,
@@ -16,12 +19,14 @@ export interface Props {
     }
   }
   render() {
+    console.info(this)
     return (
       <div>
         app
         <div>
-          <Route exact path="/" />
+          <Route exact path="/" component={Test} />
           <Route path="/test" component={Test} />
+          <Route path="/home" component={Home} />
         </div>
       </div>
     )

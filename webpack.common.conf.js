@@ -24,7 +24,7 @@ module.exports = {
     publicPath: 'dist/'
   },
   resolve: {
-    extensions: ['.json', '.web.js', '.ts', 'tsx', '.js', '.jsx', 'less', 'scss', 'css'],
+    extensions: ['.ts', 'tsx', '.js', '.jsx', '.json', '.web.js', 'less', 'scss', 'css'],
     alias: {
       common: resolve('common'),
       app: resolve('common/app'),
@@ -33,6 +33,7 @@ module.exports = {
       routes: resolve('common/routes'),
       pages: resolve('common/pages'),
       stores: resolve('common/stores'),
+      styles: resolve('common/styles'),
     }
   },
   module: {

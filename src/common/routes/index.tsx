@@ -1,10 +1,16 @@
 import * as React from 'react'
-import { HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch as Switch } from 'react-router-dom'
 import App from 'containers/app/index.tsx'
+const supportsHistory = 'pushState' in window.history
 
 const routes = (
-  <Router>
-    <App />
+  <Router
+    // basename="/minooo"
+    forceRefresh={!supportsHistory}
+  >
+    <Switch>
+      <App />
+    </Switch>
   </Router>
 )
 
