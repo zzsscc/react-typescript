@@ -5,7 +5,7 @@ interface Props {
   [name: string]: any
 }
 
-@inject('stores')
+@inject('HomeStore')
 @observer
 export default class Home extends React.Component<Props, object> {
   constructor(props?: any) {
@@ -26,15 +26,15 @@ export default class Home extends React.Component<Props, object> {
     await this.props.history.push('/')
   }
   handleAdd = async () => {
-    await this.props.stores.HomeStore.addCount()
+    await this.props.HomeStore.addCount()
   }
   handleJump = async () => {
-    const { count } = this.props.stores.HomeStore
+    const { count } = this.props.HomeStore
     // 目标页面使用this.props.match.params.key获取count、this.props.location.state.key获取origin
     await this.props.history.push(`/test/:${count}`, { origin: this.props.match.url })
   }
   render() {
-    const { count } = this.props.stores.HomeStore
+    const { count } = this.props.HomeStore
     return (
       <div>
         <p>home</p>

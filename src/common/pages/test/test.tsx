@@ -8,7 +8,7 @@ interface Props {
   [name: string]: any
 }
 
-@inject('stores')
+@inject('TestStore', 'HomeStore')
 @observer
 export default class Test extends React.Component<Props, object> {
   constructor(props?: any) {
@@ -31,7 +31,7 @@ export default class Test extends React.Component<Props, object> {
   }
 
   handleAdd = async () => {
-    this.props.stores.HomeStore.addCount()
+    this.props.HomeStore.addCount()
   }
   handleJump = async () => {
     // 目标页面使用this.props.location.state.key获取origin
@@ -41,10 +41,10 @@ export default class Test extends React.Component<Props, object> {
     console.info('handleInputChange', e)
     const { name, value } = e.currentTarget
     console.info('handleInputChange currentTarget', name, value)
-    this.props.stores.HomeStore.setCount(value)
+    this.props.HomeStore.setCount(value)
   }
   render() {
-    const { count } = this.props.stores.HomeStore
+    const { count } = this.props.HomeStore
     return (
       <div>
         <p>test</p>

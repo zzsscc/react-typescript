@@ -12,7 +12,7 @@ export default function app(props?: Props): any {
   const stores: Object = props.stores
   return (
     <AppContainer>
-      <Provider stores={stores}>
+      <Provider {...stores}>
         {routes}
       </Provider>
     </AppContainer>
