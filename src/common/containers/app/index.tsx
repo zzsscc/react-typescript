@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { observer } from 'mobx-react'
-import { Route as Route } from 'react-router-dom'
+import { Route as Route, Switch as Switch } from 'react-router-dom'
 import { Test } from 'pages/test'
 import { Home } from 'pages/home'
 
@@ -22,11 +22,11 @@ export interface Props {
     return (
       <div>
         app
-        <div>
+        <Switch>
           <Route exact path="/" component={Test} />
           <Route path="/test/:coo" component={Test} />
           <Route path="/home" component={Home} />
-        </div>
+        </Switch>
       </div>
     )
   }

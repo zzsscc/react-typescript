@@ -31,7 +31,7 @@ export default class Home extends React.Component<Props, object> {
   handleJump = async () => {
     const { count } = this.props.HomeStore
     // 目标页面使用this.props.match.params.key获取count、this.props.location.state.key获取origin
-    await this.props.history.push(`/test/:${count}`, { origin: this.props.match.url })
+    await this.props.history.push(`/test/${count}`, { origin: this.props.match.url })
   }
   render() {
     const { count } = this.props.HomeStore
