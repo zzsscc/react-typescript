@@ -11,7 +11,7 @@ export interface Props {
   [name: string]: any
 }
 
-@observer export default class App extends React.Component<object, any> {
+@observer export default class App extends React.Component<Props, object> {
   constructor(props) {
     super(props)
     this.state = {
